@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 19:42:36 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/23 19:59:16 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/23 20:01:12 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main() {
         {
             phoneBook.addContact();
             std::cout << "Adding a new contact..." << std::endl;
-        } 
+        }
         else if (command == "SEARCH")
         {
             //phoneBook.searchContact();
