@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:02:02 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/23 19:37:35 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/23 20:50:11 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CONTACT_HPP
 
 #include <string>
+#include <iostream>
+#include <iomanip>
 
 class Contact
 {
@@ -30,6 +32,7 @@ class Contact
         
         void setContact();
         void displayContact() const;
+        void displayContactShort() const;
 };
 
 #endif
