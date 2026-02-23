@@ -6,16 +6,16 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:02:02 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/23 19:17:54 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/23 19:37:35 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
 
-#include <iostream>
 #include <string>
-class contact
+
+class Contact
 {
     private:
         std::string _firstName;
@@ -23,9 +23,10 @@ class contact
         std::string _nickname;
         std::string _phoneNumber;
         std::string _darkestSecret;
+        
     public:
-        contact(void);
-        ~contact(void);
+        Contact(void);
+        ~Contact(void);
         
         void setContact();
         void displayContact() const;

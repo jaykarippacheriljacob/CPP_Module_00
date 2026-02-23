@@ -6,17 +6,21 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:14 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/22 15:01:15 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/23 19:38:27 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
+#include "Contact.hpp"
+
 class PhoneBook {
     private:
-        int _contactCount;
-        int _oldestContactIndex;
+        Contact _contacts[8];
+        int     _contactCount;
+        int     _oldestContactIndex;
+        
     public:
         PhoneBook();
         ~PhoneBook();
