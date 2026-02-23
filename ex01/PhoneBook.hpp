@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:14 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/23 19:38:27 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/23 20:15:40 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 #include "Contact.hpp"
 
+/*
+** Class: PhoneBook
+** Description: Manages a collection of contacts. Allows adding new contacts and
+** searching existing ones. 
+*/
 class PhoneBook {
     private:
         Contact _contacts[8];
