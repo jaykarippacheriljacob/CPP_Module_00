@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:02:02 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 13:13:11 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 13:28:15 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 #include <iomanip>
 #include <cstdlib>
 
+/*
+** Class: Contact
+** Description: Represents an individual contact in the phone book. Contains
+** private member variables for storing contact information and public member
+** functions for setting and displaying contact details. 
+*/
 class Contact
 {
     private:
