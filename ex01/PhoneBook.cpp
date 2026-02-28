@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:19 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 14:00:17 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 17:12:46 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,8 @@ void    PhoneBook::searchContact() const
     }
     std::cout << std::setw(10) << std::right << "\033[32mIndex\033[0m" << "|"
           << std::setw(10) << std::right << "\033[32mFirst Name\033[0m" << "|"
-          << std::setw(10) << std::right << "\033[32mLast Name\033[0m" << "|"
-          << std::setw(10) << std::right << "\033[32mNickname\033[0m"
+          << std::setw(10) << std::right << "\033[32m Last Name\033[0m" << "|"
+          << std::setw(10) << std::right << "\033[32m  Nickname\033[0m"
           << std::endl;
     for (int i = 0; i < _contactCount; i++)
     {
