@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:53 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 13:11:40 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 17:19:38 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,9 @@ void Contact::setContact()
 */
 void Contact::displayContact() const
 {
-    std::cout << "First Name: " << _firstName << std::endl;
-    std::cout << "Last Name: " << _lastName << std::endl;
-    std::cout << "Nickname: " << _nickname << std::endl;
-    std::cout << "Phone Number: " << _phoneNumber << std::endl;
-    std::cout << "Darkest Secret: " << _darkestSecret << std::endl;
+    std::cout << "\033[32mFirst Name: \033[0m" << _firstName << std::endl;
+    std::cout << "\033[32mLast Name: \033[0m" << _lastName << std::endl;
+    std::cout << "\033[32mNickname: \033[0m" << _nickname << std::endl;
+    std::cout << "\033[32mPhone Number: \033[0m" << _phoneNumber << std::endl;
+    std::cout << "\033[32mDarkest Secret: \033[0m" << _darkestSecret << std::endl;
 }

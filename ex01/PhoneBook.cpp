@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:19 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 17:12:46 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 17:24:24 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void    PhoneBook::searchContact() const
         std::cout << std::setw(5) << i + 1 << "|";
         _contacts[i].displayContactShort();
     }
-    std::cout << "Enter the index of the contact to view full details: ";
+    std::cout << "\033[34mEnter the index of the contact to view full details: \033[0m";
     std::getline(std::cin, input);
     checkdisplayContact(input, _contacts, _contactCount);
 }
