@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 19:42:36 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/23 20:01:12 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 13:00:15 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,20 @@ int main() {
     std::string command;
 
     while (true) {
-        std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
+        std::cout << "Enter a command (ADD(A), SEARCH(S), EXIT(E)): ";
         std::getline(std::cin, command);
 
-        if (command == "ADD")
+        if (command == "ADD" || command == "A")
         {
             phoneBook.addContact();
             std::cout << "Adding a new contact..." << std::endl;
         }
-        else if (command == "SEARCH")
+        else if (command == "SEARCH" || command == "S")
         {
-            //phoneBook.searchContact();
+            phoneBook.searchContact();
             std::cout << "Searching for a contact..." << std::endl;
         }
-        else if (command == "EXIT")
+        else if (command == "EXIT" || command == "E")
         {
             std::cout << "Exiting the program." << std::endl;
             break;

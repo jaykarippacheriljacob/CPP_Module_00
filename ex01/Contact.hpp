@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:02:02 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 12:27:49 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 13:13:11 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 
 class Contact
 {
@@ -31,7 +32,7 @@ class Contact
         ~Contact(void);
         
         void setContact();
-        // void displayContact() const;
+        void displayContact() const;
         void displayContactShort() const;
 };
 

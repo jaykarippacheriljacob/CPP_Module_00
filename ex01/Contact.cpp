@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:53 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 12:46:39 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 13:11:40 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void Contact::displayContactShort() const
 }
 
 /*
-** Wrapper function: to make sure all the fields are set when creating a contact.
+** Wrapper function: getNonEmptyInput
 ** Description: Prompts the user to enter contact information and stores it in the
 ** contact's private member variables. 
 */
@@ -83,4 +83,17 @@ void Contact::setContact()
     _nickname = getNonEmptyInput("Enter nickname: ");
     _phoneNumber = getNonEmptyInput("Enter phone number: ");
     _darkestSecret = getNonEmptyInput("Enter darkest secret: ");
+}
+
+/*
+** Function: displayContact
+** Description: Displays the full details of the contact. 
+*/
+void Contact::displayContact() const
+{
+    std::cout << "First Name: " << _firstName << std::endl;
+    std::cout << "Last Name: " << _lastName << std::endl;
+    std::cout << "Nickname: " << _nickname << std::endl;
+    std::cout << "Phone Number: " << _phoneNumber << std::endl;
+    std::cout << "Darkest Secret: " << _darkestSecret << std::endl;
 }

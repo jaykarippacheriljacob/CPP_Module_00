@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:19 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/23 20:50:22 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 13:10:51 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,30 @@ void    PhoneBook::addContact()
 }
 
 /*
+** Wrapper function: checkdisplayContact
+** Description: Validates the user input for selecting a contact index and displays
+** the full details of the selected contact if the input is valid. 
+*/
+static void checkdisplayContact(const std::string& input, const Contact contacts[8])
+{
+    int index;
+
+    index = std::atoi(input.c_str());
+    if (index < 0 || index >= 8)
+        std::cout << "\033[31mInvalid index. Please enter a number between 0 and 7.\033[0m" << std::endl;
+    else
+        contacts[index].displayContact();
+}
+
+/*
 ** Function: searchContact
 ** Description: Displays the list of contacts and allows the user to view details of
 ** a specific contact
 */
 void    PhoneBook::searchContact() const
 {
+    std::string input;
+    
     if (_contactCount == 0)
     {
         std::cout << "\033[31mNo contacts in the phone book.\033[0m" << std::endl;
@@ -72,4 +90,7 @@ void    PhoneBook::searchContact() const
         std::cout << std::setw(5) << i << "|";
         _contacts[i].displayContactShort();
     }
+    std::cout << "Enter the index of the contact to view full details: ";
+    std::getline(std::cin, input);
+    checkdisplayContact(input, _contacts);
 }
