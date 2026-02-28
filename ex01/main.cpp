@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 19:42:36 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 13:00:15 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 16:54:33 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int main() {
         }
         else if (command == "SEARCH" || command == "S")
         {
-            phoneBook.searchContact();
             std::cout << "Searching for a contact..." << std::endl;
+            phoneBook.searchContact();
         }
         else if (command == "EXIT" || command == "E")
         {

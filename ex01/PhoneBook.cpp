@@ -6,7 +6,7 @@
 /*   By: jkarippa <jkarippa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/22 15:01:19 by jkarippa          #+#    #+#             */
-/*   Updated: 2026/02/28 13:10:51 by jkarippa         ###   ########.fr       */
+/*   Updated: 2026/02/28 14:00:17 by jkarippa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,15 +55,20 @@ void    PhoneBook::addContact()
 ** Description: Validates the user input for selecting a contact index and displays
 ** the full details of the selected contact if the input is valid. 
 */
-static void checkdisplayContact(const std::string& input, const Contact contacts[8])
+static void checkdisplayContact(const std::string& input, const Contact contacts[8], int contactCount)
 {
     int index;
 
-    index = std::atoi(input.c_str());
-    if (index < 0 || index >= 8)
-        std::cout << "\033[31mInvalid index. Please enter a number between 0 and 7.\033[0m" << std::endl;
+    if (input.length() != 1 || !std::isdigit(input[0]))
+        std::cout << "Invalid index." << std::endl;
     else
-        contacts[index].displayContact();
+    {
+        index = input[0] - '0';
+        if (index < 1 || index > contactCount)
+            std::cout << "\033[31mInvalid index.\033[0m" << std::endl;
+        else
+            contacts[index - 1].displayContact();
+    }
 }
 
 /*
@@ -87,10 +92,10 @@ void    PhoneBook::searchContact() const
           << std::endl;
     for (int i = 0; i < _contactCount; i++)
     {
-        std::cout << std::setw(5) << i << "|";
+        std::cout << std::setw(5) << i + 1 << "|";
         _contacts[i].displayContactShort();
     }
     std::cout << "Enter the index of the contact to view full details: ";
     std::getline(std::cin, input);
-    checkdisplayContact(input, _contacts);
+    checkdisplayContact(input, _contacts, _contactCount);
 }
